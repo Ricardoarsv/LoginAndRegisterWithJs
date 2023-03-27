@@ -208,7 +208,7 @@
     #InicioSesion button:hover{
         background: rgba(254, 206, 206, 0.889);
     }
-    
+
     /* Estilos para pantallas más pequeñas que 600px */
 @media screen and (max-width: 600px) {
 body {
@@ -232,19 +232,36 @@ body {
     margin-top: 3em;
     margin-left: 12.2em;
     display: flex;
+    }
+    #Registro input{
+    margin-left: 2em;
+    border-radius: 1em;
+    border-style: none;
+    width: 11em;
+    text-align: center;
+    }
+    #InicioSesion input{
+    margin-left: 2em;
+    border-radius: 1em;
+    border-style: none;
+    width: 11em;
+    text-align: center;
 }
-#Registro input{
-  margin-left: 2em;
-  border-radius: 1em;
-  border-style: none;
-  width: 11em;
-  text-align: center;
+    #Registro button{
+        text-align: center;
+        margin-left: 2.6em;
+        width: 10em;
+        height: 2em;
+        border: none;
+        border-radius: 1em;
 }
-#InicioSesion input{
-  margin-left: 2em;
-  border-radius: 1em;
-  border-style: none;
-  width: 11em;
-  text-align: center;
-}
+
+    #InicioSesion button{
+        text-align: center;
+        margin-left: 2.8em;
+        width: 10em;
+        height: 2em;
+        border: none;
+        border-radius: 1em;
+    }
 }
