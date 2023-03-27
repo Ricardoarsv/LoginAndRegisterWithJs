@@ -1,0 +1,250 @@
+@media screen and (min-width: 601px) {
+  body {
+    background: linear-gradient(75deg, #fffeff 0%, rgb(88, 88, 132) 50%, #0b0b0b 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 8% 30% 8% 30%;
+    padding: 0;
+    font-size: 18px;
+    font-family: Arial;
+    @font-face {
+        font-family: Arial;
+        src: url("./Fonts/Take Looks.ttf");
+    }
+  }
+  img{
+    width: 5em;
+    margin-top: 2em;
+  }
+}
+
+#imgRectangule{
+    position: absolute;
+    margin-top: 4em;
+    margin-left: 12.5em;
+    display: flex;
+}
+#h2Rectangule{
+    position: absolute;
+    margin-top: 5.5em;
+    margin-left: 5.4em;
+    text-align: center;
+}
+  #rectangle {
+    background: rgba(255, 218, 218, 0.924);
+    border-radius: 6em;
+    width: 30em;
+    height: 20em;
+    position: absolute;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  #LEFTSIDE{
+    background: rgba(255, 218, 218, 0.924);
+    border-radius: 6em;
+    width: 20em;
+    height: 20em;
+    margin-right: 100em;
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+    position: absolute;
+    border: 1em;
+    shape-outside: circle(10em at 0 50%);
+    float: left;
+    user-select: none;
+    }
+    
+    #LEFTSIDE p, h2 {
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 10em;
+    box-sizing: border-box;
+    text-align: center;
+    }
+    
+    #LEFTSIDE:hover{
+        background: rgba(101, 102, 208, 0.681);
+        transform: translate(1%, 2%);
+        transform-origin: 50% 100%;
+        transition: 1s;
+        width: 19.3em;
+        height: 19.4em;
+        border-radius: 50%;
+    }
+
+    #RIGHTSIDE{
+        background: rgba(255, 218, 218, 0.924);
+        border-radius: 6em;
+        width: 20em;
+        height: 20em;
+        margin-left: 10em;
+        clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+        position: absolute;
+        border: 1em;
+        shape-outside: circle(10em at 0 50%);
+        float: right;
+        user-select: none;
+    }
+
+    #RIGHTSIDE #h2r {
+        padding-top: 1em;
+        padding-left: 5.5em;
+        padding-right: 2em;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #RIGHTSIDE #pr{
+        padding-top: 1em;
+        padding-left: 10em;
+        padding-right: 2em;
+        box-sizing: border-box;
+        text-align: center; 
+    }
+
+    #RIGHTSIDE:hover{
+        background: rgba(101, 102, 208, 0.681);
+        transform: translate(2%, 1%);
+        transition: 1s;
+        width: 19.3em;
+        height: 19.4em;
+        border-radius: 50%;
+    }
+
+  #line1 {
+    width: 2px;
+    height: 20em;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+
+  #line2 {
+    width: 2px;
+    height: 20em;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 66.7%;
+    transform: translate(-50%, -50%);
+  }
+  #Registro{
+    background: rgba(255, 218, 218);
+    width: 20em;
+    height: 20em;
+    margin-left: 10em;
+    position: absolute;
+    border-radius: 0 6em 6em 0;
+    display: none;
+    
+  }
+
+  #Registro h2{
+    padding: 1em;
+    text-align: center;
+  }
+  #Registro label{
+    margin-left: 6em;
+    background: rgba(254, 206, 206, 0.889);
+    border-radius: 2em;
+    text-align: center;
+  }
+  #Registro input{
+    margin-left: 8em;
+    border-radius: 1em;
+    border-style: none;
+    width: 11em;
+    text-align: center;
+  }
+
+  #Registro button{
+    text-align: center;
+    margin-left: 8.5em;
+    width: 10em;
+    height: 2em;
+    border: none;
+    border-radius: 1em;
+}
+    #Registro button:hover{
+        background: rgba(254, 206, 206, 0.889);
+}
+
+  #InicioSesion{
+    background: rgba(255, 218, 218);
+    width: 20em;
+    height: 20em;
+    position: absolute;
+    border-radius: 6em 0 0 6em;
+    display: none;
+  }
+
+  #InicioSesion h2{
+    padding: 1em;
+    text-align: center;
+  }
+  #InicioSesion label{
+    margin-left: 6em;
+    background: rgba(254, 206, 206, 0.889);
+    border-radius: 2em;
+    text-align: center;
+  }
+  #InicioSesion input{
+    margin-left: 8em;
+    border-radius: 1em;
+    border-style: none;
+    width: 11em;
+    text-align: center;
+  }
+
+  #InicioSesion button{
+    text-align: center;
+    margin-left: 8.5em;
+    width: 10em;
+    height: 2em;
+    border: none;
+    border-radius: 1em;
+}
+    #InicioSesion button:hover{
+        background: rgba(254, 206, 206, 0.889);
+    }
+    
+    /* Estilos para pantallas más pequeñas que 600px */
+@media screen and (max-width: 600px) {
+body {
+    background: linear-gradient(75deg, #fffeff 0%, rgb(88, 88, 132) 50%, #0b0b0b 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 60% 15% 40% 15%;
+    padding: 0;
+    font-size: 10px;
+    font-family: Arial;
+    @font-face {
+        font-family: Arial;
+        src: url("./Fonts/Take Looks.ttf");
+    }
+  }
+  img{
+    width: 6em;
+  }
+  #imgRectangule{
+    position: absolute;
+    margin-top: 3em;
+    margin-left: 12.2em;
+    display: flex;
+}
+#Registro input{
+  margin-left: 2em;
+  border-radius: 1em;
+  border-style: none;
+  width: 11em;
+  text-align: center;
+}
+#InicioSesion input{
+  margin-left: 2em;
+  border-radius: 1em;
+  border-style: none;
+  width: 11em;
+  text-align: center;
+}
+}

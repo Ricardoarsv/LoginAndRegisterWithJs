@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LoginAnimado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAnImCR7v25PM9le7CkNRm4D8laNX-rcIw",
+        authDomain: "loginregisterstaticwebsite.firebaseapp.com",
+        projectId: "loginregisterstaticwebsite",
+        storageBucket: "loginregisterstaticwebsite.appspot.com",
+        messagingSenderId: "153604687778",
+        appId: "1:153604687778:web:eb179030aa07d4b5c354fb",
+        measurementId: "G-HEVWL4390R"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </head>
+  <body>
+    <div id="rectangle">
+        <center><img id="imgRectangule" src="./images/R.png" alt="Imagen de login"></center>
+        <h2 id="h2Rectangule">Bienvenido usuario</h2>
+        <div id="LEFTSIDE">
+            <h2>Registrar</h2>
+            <p>Si no tiene una cuenta, haga click acá para proceder con su registro</p>
+        </div>
+        <div id="RIGHTSIDE">
+            <h2 id="h2r">Inicio</h2>
+            <p id="pr">Si ya tiene una cuenta, haga click acá para proceder con su logueo</p>
+        </div>
+        <di id="InicioSesion">
+            <h2>Iniciar sesion</h2>
+            <form id="LoginForm">
+              <label>Correo electronico:</label><br>
+              <input type="email"
+              name="emaillogin"
+              placeholder="Correo@email.com"
+              requiered><br><br><br>
+              <label>Contraseña:</label><br>
+              <input type="password"
+              name="passlogin"
+              placeholder="•••••••••••••"
+              required><br><br>
+              <button type="submit">Iniciar Sesion</button>
+          </form>
+        </di>
+        <div id="Registro">
+          <h2>Registrarse</h2>
+          <form id="RegisterForm">
+            <label>Correo electronico:</label><br>
+            <input type="email"
+            placeholder="Correo@email.com"
+            name="emailregis"
+            requiered><br><br><br>
+            <label>Contraseña:</label><br>
+            <input type="password"
+            name="passregis"
+            placeholder="•••••••••••••"
+            required><br><br>
+            <button type="submit">Registrarse</button>
+          </form>
+
+        </div>
+      <div id="line1"></div>
+      <div id="line2"></div>
+    </div>
+    <script>
+      const IniciarSesion = document.getElementById('RIGHTSIDE');
+      IniciarSesion.addEventListener('click', MostrarDivInicio);
+      const Linea1 = document.getElementById('line1')
+
+      function MostrarDivInicio(){
+        const IniciarSesion = document.getElementById('InicioSesion')
+        if (IniciarSesion.style.display === 'none'){
+          IniciarSesion.style.display = 'block';
+          Linea1.style.display = 'none'
+        } else{
+          IniciarSesion.style.display= 'none';
+          Linea1.style.display = 'block'
+          }
+        }
+
+        const Registro = document.getElementById('LEFTSIDE');
+      Registro.addEventListener('click', MostrarDivRegistro);
+      const Linea2 = document.getElementById('line2')
+
+      function MostrarDivRegistro(){
+        const Registro = document.getElementById('Registro')
+        if (Registro.style.display === 'none'){
+          Registro.style.display = 'block';
+          Linea2.style.display = 'none'
+        } else{
+          Registro.style.display= 'none';
+          Linea2.style.display = 'block'
+          }
+        }
+
+        const loginForm = document.querySelector('#LoginForm');
+        loginForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = loginForm['emaillogin'].value;
+          const password = loginForm['passlogin'].value;
+          firebase.auth().signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+              // Inicio de sesión exitoso, redirige al usuario a la página de inicio
+              alert('Logueo exitoso');
+            })
+            .catch((error) => {
+              alert('Usuario no registrado');
+            });
+        });
+
+        const registroForm = document.querySelector('#RegisterForm');
+        registroForm.addEventListener('submit', (e) => {
+              e.preventDefault();
+              const email = registroForm['emailregis'].value;
+              const password = registroForm['passregis'].value;
+              firebase.auth().createUserWithEmailAndPassword(email, password)
+              .then((userCredential) => {
+                  // Registro exitoso, redirige al usuario a la página de inicio
+                  window.location.href = "./index.html", '_self';
+              })
+              .catch((error) => {
+                  alert('Este correo ya esta registrado, porfavor, utilice otro para su registro');
+            });
+        });
+    </script>
+  </body>
+</html>
