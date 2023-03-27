@@ -47,7 +47,7 @@
               name="passlogin"
               placeholder="•••••••••••••"
               required><br><br>
-              <button type="submit">Iniciar Sesion</button>
+              <button id="iniciarSesionBtn" type="submit">Iniciar Sesion</button>
           </form>
         </di>
         <div id="Registro">
@@ -106,7 +106,7 @@
           Linea2.style.display = 'block'
           }
         }
-
+        
         function MostrarDivSesion(){
           const Sesion = document.getElementById('Sesion')
           if (Sesion.style.display === 'none'){
@@ -115,8 +115,6 @@
             Linea2.style.display = 'none'
           } else {
             Sesion.style.display= 'none';
-            Linea1.style.display = 'block';
-            Linea2.style.display = 'block'
             }
         }
 
@@ -127,13 +125,16 @@
           const password = loginForm['passlogin'].value;
           firebase.auth().signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
-              // Inicio de sesión exitoso, redirige al usuario a la página de inicio
-              MostrarDivSesion()
+              // Hide login form and show "Sesion" div
+              MostrarDivSesion();
             })
             .catch((error) => {
-              alert('Usuario no registrado');
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              console.log(errorCode, errorMessage);
             });
         });
+
 
         const registroForm = document.querySelector('#RegisterForm');
         registroForm.addEventListener('submit', (e) => {

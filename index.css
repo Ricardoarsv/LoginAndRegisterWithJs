@@ -1,6 +1,6 @@
 @media screen and (min-width: 601px) {
   body {
-    background: linear-gradient(75deg, #fffeff 0%, rgb(88, 88, 132) 50%, #0b0b0b 100%);
+    background: linear-gradient(75deg, #4cc9f0 10%, #4895ef , #4361ee , #3f37c9, #3a0ca3 60%, #480ca8, #560bad, #7209b7);
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 8% 30% 8% 30%;
@@ -31,7 +31,7 @@
     text-align: center;
 }
   #rectangle {
-    background: rgba(255, 218, 218, 0.924);
+    background: #dfdfdf;
     border-radius: 6em;
     width: 30em;
     height: 20em;
@@ -40,7 +40,7 @@
   }
   
   #LEFTSIDE{
-    background: rgba(255, 218, 218, 0.924);
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(161, 161, 161));
     border-radius: 6em;
     width: 20em;
     height: 20em;
@@ -72,7 +72,7 @@
     }
 
     #RIGHTSIDE{
-        background: rgba(255, 218, 218, 0.924);
+        background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(161, 161, 161));
         border-radius: 6em;
         width: 20em;
         height: 20em;
@@ -130,7 +130,7 @@
     transform: translate(-50%, -50%);
   }
   #Registro{
-    background: rgba(255, 218, 218);
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(161, 161, 161));
     width: 20em;
     height: 20em;
     margin-left: 10em;
@@ -146,7 +146,7 @@
   }
   #Registro label{
     margin-left: 6em;
-    background: rgba(254, 206, 206, 0.889);
+    background: rgb(200, 203, 246);
     border-radius: 2em;
     text-align: center;
   }
@@ -171,16 +171,17 @@
     border-radius: 1em;
 }
     #Registro button:hover{
-        background: rgba(254, 206, 206, 0.889);
+        background: rgb(200, 203, 246);
 }
 
   #InicioSesion{
-    background: rgba(255, 218, 218);
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(161, 161, 161));
     width: 20em;
     height: 20em;
     position: absolute;
     border-radius: 6em 0 0 6em;
     display: none;
+    
   }
 
   #InicioSesion h2{
@@ -189,7 +190,7 @@
   }
   #InicioSesion label{
     margin-left: 6em;
-    background: rgba(254, 206, 206, 0.889);
+    background: rgb(200, 203, 246);
     border-radius: 2em;
     text-align: center;
   }
@@ -210,11 +211,11 @@
     border-radius: 1em;
 }
   #InicioSesion button:hover{
-    background: rgba(254, 206, 206, 0.889);
+    background: rgb(200, 203, 246);
     }
 
   #Sesion{
-    background: rgba(255, 218, 218);
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(161, 161, 161));
     width: 30em;
     height: 20em;
     position: absolute;
@@ -240,7 +241,7 @@
   }
 
   #Sesion button:hover{
-    background: rgba(254, 206, 206, 0.889);
+    background: rgb(200, 203, 246);
     }
     /* Estilos para pantallas más pequeñas que 600px */
 @media screen and (max-width: 600px) {
