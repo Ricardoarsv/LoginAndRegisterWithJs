@@ -157,6 +157,10 @@
     width: 11em;
     text-align: center;
   }
+  #Registro p{
+    text-align: center;
+    font-size: 0.5em;
+  }
 
   #Registro button{
     text-align: center;
@@ -205,10 +209,39 @@
     border: none;
     border-radius: 1em;
 }
-    #InicioSesion button:hover{
-        background: rgba(254, 206, 206, 0.889);
+  #InicioSesion button:hover{
+    background: rgba(254, 206, 206, 0.889);
     }
 
+  #Sesion{
+    background: rgba(255, 218, 218);
+    width: 30em;
+    height: 20em;
+    position: absolute;
+    border-radius: 6em;
+    display: none;
+}
+
+  #Sesion h2{
+    padding: 1em;
+  }
+
+  #Sesion p{
+    text-align: center;
+  }
+
+  #Sesion button{
+    margin-left: 15em;
+    text-align: center;
+    width: 10em;
+    height: 2em;
+    border: none;
+    border-radius: 1em;
+  }
+
+  #Sesion button:hover{
+    background: rgba(254, 206, 206, 0.889);
+    }
     /* Estilos para pantallas más pequeñas que 600px */
 @media screen and (max-width: 600px) {
 body {
@@ -230,7 +263,7 @@ body {
   #imgRectangule{
     position: absolute;
     margin-top: 3em;
-    margin-left: 12.2em;
+    margin-left: 12em;
     display: flex;
     }
     #Registro input{
